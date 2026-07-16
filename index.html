@@ -258,45 +258,60 @@ Brindar soluciones industriales integrales mediante servicios de ingeniería, fa
 </section>
 
 <!-- NUEVA SECCIÓN: UBICACIÓN Y SUCURSALES -->
+<!-- SECCIÓN UBICACIÓN: MAPA CON EFECTO DE MOVIMIENTO -->
 <section class="section" id="ubicacion">
   <div class="wrap">
     <div class="location-intro reveal" style="text-align: center; margin-bottom: 40px;">
-      <h2>Presencia en el país</h2>
-      <p>Contamos con cobertura estratégica para atender proyectos en todo el centro de México.</p>
+      <h2>Presencia en el Centro de México</h2>
+      <!--<p>Sucursales estratégicas en Toluca y Tlaxcala para atender tus proyectos.</p>-->
     </div>
 
     <div class="location-grid reveal" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
-      <!-- Mapa de México con puntos -->
-      <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        <iframe 
-          src="https://www.google.com/maps/d/embed?mid=1KfXzI8yY7xQZ9X7Z7X7Z7X7Z7X7Z7X7&z=6&hl=es"
-          width="100%" 
-          height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-            </div>
-
-               <!-- Lista de sucursales por estado -->
-               <div class="location-list">
-                <h3>Nuestras sucursales</h3>
-               <div class="location-item" style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                  <h4 style="color: #007bff; margin-bottom: 8px;">📍 Tlaxcala</h4>
-          <p style="margin: 0; font-size: 1em;">1 sucursales operativas en el estado</p>
-        </ div>
-        <div class="location-item" style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-          <h4 style="color: #007bff; margin-bottom: 8px;">📍 Toluca de Lerdo, Estado de México</h4>
-          <p style="margin: 0; font-size: 1em;">1 sucursal central</p>
+      <!-- MAPA SIMULADO CON EFECTO DE DESPLAZAMIENTO -->
+      <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border: 1px solid #ddd; height: 450px; position: relative;">
+        <!-- Imagen del mapa con los dos puntos -->
+        <div style="width: 120%; height: 120%; position: absolute; top: -10%; left: -10%; 
+            background-image: url('img/mapa.png'); 
+            background-size: cover; background-position: center;
+            animation: suaveMovimiento 25s ease-in-out infinite alternate;">
         </div>
-        <p style="margin-top: 30px; color: #666; font-size: 0.95em;">
-          * No publicamos direcciones exactas por seguridad. Contáctanos para coordinar visitas o indicaciones precisas.
-        </p>
+        <!-- Indicador de interacción -->
+        <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 12px; border-radius: 20px; font-size: 0.85em; color: #555;">
+          📍
+        </div>
+      </div>
+
+      <!-- LISTA DE UBICACIONES -->
+      <div class="location-list">
+        <h3>Nuestras zonas de operación</h3>
+        <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f30606;">
+          <h4 style="color: #ff0000; margin-bottom: 8px;">📍 Toluca de Lerdo, Estado de México</h4>
+          <p>1 sucursal central con cobertura en todo el estado.</p>
+        </div>
+        <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #fc3200;">
+          <h4 style="color: #ff0000; margin-bottom: 8px;">📍 Estado de Tlaxcala</h4>
+          <p>1 sucursales con cobertura en toda la entidad.</p>
+        </div>
+        <div style="margin-top: 30px; padding: 15px; background: #e7f3ff; border-radius: 6px;">
+          <p style="margin: 0; color: #000000; font-size: 0.95em;">
+            ℹ️ Vista general de nuestras zonas. Contáctanos para indicaciones precisas.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ANIMACIÓN SUAVE DE MOVIMIENTO -->
+<style>
+@keyframes suaveMovimiento {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, -2%); }
+  50% { transform: translate(2%, 1%); }
+  75% { transform: translate(-2%, 2%); }
+  100% { transform: translate(3%, -1%); }
+}
+</style>
 
 <section class="section" id="contacto">
   <div class="wrap contact-grid">
