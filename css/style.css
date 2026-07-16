@@ -635,3 +635,40 @@ footer{background:var(--steel-950);color:rgba(255,255,255,.7);padding:clamp(40px
   .reveal,.custom-cursor,.cursor-dot,.btn,.menu-toggle span,.mobile-menu{transition:none !important;}
   .reveal{opacity:1;transform:none;}
 }
+
+
+
+@keyframes suaveMovimiento {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, -2%); }
+  50% { transform: translate(2%, 1%); }
+  75% { transform: translate(-2%, 2%); }
+  100% { transform: translate(3%, -1%); }
+}
+
+/* AJUSTES PARA TABLETAS Y CELULARES */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .map-container {
+    min-height: 350px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-intro h2 {
+    font-size: 1.5em !important;
+  }
+  .location-list h3 {
+    font-size: 1.25em !important;
+  }
+  .map-container {
+    min-height: 300px !important;
+  }
+  .location-list > div {
+    padding: 16px !important;
+    margin: 15px 0 !important;
+  }
+}

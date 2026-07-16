@@ -451,7 +451,7 @@ if (canvas) {
 
         reset() {
 
-            this.size = Math.random() * 3 + 2;
+            this.size = Math.random() * 1 + 4;
 
             this.speedX = (Math.random() - 0.5) * 0.4;
             this.speedY = (Math.random() - 0.5) * 0.4;
