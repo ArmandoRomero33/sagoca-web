@@ -257,7 +257,50 @@ Brindar soluciones industriales integrales mediante servicios de ingeniería, fa
   </div>
 </section>
 
- GRILLETES  DE 5/8 CROSBY
+<!-- NUEVA SECCIÓN: UBICACIÓN Y SUCURSALES -->
+<!-- SECCIÓN UBICACIÓN: MAPA CON EFECTO DE MOVIMIENTO -->
+<section class="section" id="ubicacion">
+  <div class="wrap">
+    <div class="location-intro reveal" style="text-align: center; margin-bottom: 40px;">
+      <h2>Presencia en el Centro de México</h2>
+      <!--<p>Sucursales estratégicas en Toluca y Tlaxcala para atender tus proyectos.</p>-->
+    </div>
+
+    <div class="location-grid reveal" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
+      <!-- MAPA SIMULADO CON EFECTO DE DESPLAZAMIENTO -->
+      <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.15); border: 1px solid #ddd; height: 450px; position: relative;">
+        <!-- Imagen del mapa con los dos puntos -->
+        <div style="width: 120%; height: 120%; position: absolute; top: -10%; left: -10%; 
+            background-image: url('img/mapa.png'); 
+            background-size: cover; background-position: center;
+            animation: suaveMovimiento 25s ease-in-out infinite alternate;">
+        </div>
+        <!-- Indicador de interacción -->
+        <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 8px 12px; border-radius: 20px; font-size: 0.85em; color: #555;">
+          📍
+        </div>
+      </div>
+
+      <!-- LISTA DE UBICACIONES -->
+      <div class="location-list">
+        <h3>Nuestras zonas de operación</h3>
+        <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f30606;">
+          <h4 style="color: #ff0000; margin-bottom: 8px;">📍 Toluca de Lerdo, Estado de México</h4>
+          <p>1 sucursal  con cobertura en todo el estado.</p>
+        </div>
+        <div style="margin: 25px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #fc3200;">
+          <h4 style="color: #ff0000; margin-bottom: 8px;">📍 Estado de Tlaxcala</h4>
+          <p>1 sucursales con cobertura en todo el estado.</p>
+        </div>
+        <div style="margin-top: 30px; padding: 15px; background: #e7f3ff; border-radius: 6px;">
+          <p style="margin: 0; color: #000000; font-size: 0.95em;">
+            ℹ️ Vista general de nuestras zonas. Contáctanos para indicaciones precisas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ANIMACIÓN SUAVE DE MOVIMIENTO -->
 <style>
@@ -267,6 +310,42 @@ Brindar soluciones industriales integrales mediante servicios de ingeniería, fa
   50% { transform: translate(2%, 1%); }
   75% { transform: translate(-2%, 2%); }
   100% { transform: translate(3%, -1%); }
+}
+</style>
+<style>
+@keyframes suaveMovimiento {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, -2%); }
+  50% { transform: translate(2%, 1%); }
+  75% { transform: translate(-2%, 2%); }
+  100% { transform: translate(3%, -1%); }
+}
+
+/* AJUSTES PARA TABLETAS Y CELULARES */
+@media (max-width: 992px) {
+  .location-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  .map-container {
+    min-height: 350px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-intro h2 {
+    font-size: 1.5em !important;
+  }
+  .location-list h3 {
+    font-size: 1.25em !important;
+  }
+  .map-container {
+    min-height: 300px !important;
+  }
+  .location-list > div {
+    padding: 16px !important;
+    margin: 15px 0 !important;
+  }
 }
 </style>
 
